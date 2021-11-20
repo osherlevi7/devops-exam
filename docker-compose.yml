@@ -1,0 +1,8 @@
+app:
+  build: ./
+  volumes:
+    - ./:/docker-exam
+  ports:
+    - 8000:8000
+  command:
+    sh  './main.go'
