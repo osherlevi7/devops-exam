@@ -1,8 +1,22 @@
-app:
-  build: ./
-  volumes:
-    - ./:/docker-exam
-  ports:
-    - 8000:8000
-  command:
-    sh  './main.go'
+version: '2'
+services:
+  redis:
+    image: redis:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 6379:6379
+  app:
+    build: .
+    command: ["go", "run", "main.go"]
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/local/bin/docker:/bin/docker
+      - .:/go/src/docker-exam/
+    ports:
+      - 8000:8000
+    depends_on:
+      - redis
+    links:
+      - redis
