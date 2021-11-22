@@ -21,7 +21,7 @@ type Requests struct {
 func main() {
 	http.HandleFunc("/hits", handler)
 	http.HandleFunc("/count", counter)
-	log.Fatal(http.ListenAndServe("localhost:8000", nil))
+	log.Fatal(http.ListenAndServe("localhost:8080", nil))
 
 	client := redis.NewClient(&redis.Options{
 		Addr:     "localhost:6379",
