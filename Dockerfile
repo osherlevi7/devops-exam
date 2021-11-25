@@ -9,7 +9,7 @@ RUN go mod download
 # copy the source directory to the working directory inside the container
 COPY . . 
 # EXPOSE the app 
-#EXPOSE 8000
+EXPOSE 8080 3000 
 # build the GO app 
 RUN go build -o /go-docker
 # command to executeable
