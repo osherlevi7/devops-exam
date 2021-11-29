@@ -1,5 +1,0 @@
-Package: devops-exam
-Version: 1.0
-Architecture: amd64
-Maintainer: Internal Pointers <https://github.com/osherlevi7/devops-exam>
-Description: This package is a part of a devops-exam from immunai company. creating a deb package.
