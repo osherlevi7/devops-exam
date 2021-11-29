@@ -1,12 +1,12 @@
 #!/bin/bash
 
-echo "Package-Name-For-Build: "
+echo "Package-Name-For-Build[eg. devops-exam]: "
 read pkg
-echo "Version to create: "
+echo "Version to create[eg. - 1.0]: "
 read version
-echo "Revision to build: "
+echo "Revision to build[eg. - 1]: "
 read rev
-echo "The target Architectore: "
+echo "The target Architectore[eg. amd64]: "
 read arch
 echo "Maintainers: "
 read maintainers
