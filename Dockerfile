@@ -1,4 +1,4 @@
-FROM golang:latest 
+FROM golang:1.18.2-stretch 
 
 # set the current working directory inside container
 WORKDIR /docker-exam
